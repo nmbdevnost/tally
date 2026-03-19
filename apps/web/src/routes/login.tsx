@@ -1,5 +1,6 @@
 import Spinner from "@/components/spinner"
 import { authClient, signIn } from "@/lib/auth-client"
+import { getSession } from "@/lib/auth-server"
 import { Button } from "@tally/ui/components/button"
 import {
   Card,
@@ -14,9 +15,9 @@ import { useTransition } from "react"
 
 export const Route = createFileRoute("/login")({
   beforeLoad: async () => {
-    const session = await authClient.getSession()
-    if (session.data) {
-      throw redirect({ to: "/dashboard" })
+    const session = await getSession()
+    if (session) {
+      throw redirect({ to: "/" })
     }
   },
   component: LoginPage,
@@ -29,7 +30,7 @@ function LoginPage() {
     startTransition(async () => {
       await signIn.social({
         provider: "google",
-        callbackURL: "/dashboard",
+        callbackURL: `${window.location.origin}/`,
       })
     })
   }

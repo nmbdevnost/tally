@@ -1,4 +1,3 @@
-import { TooltipProvider } from "@tally/ui/components/tooltip"
 import { QueryClientProvider } from "@tanstack/react-query"
 import { createRouter as createTanStackRouter } from "@tanstack/react-router"
 import { queryClient } from "./lib/query-client"
@@ -11,9 +10,7 @@ export function getRouter() {
     defaultPreload: "intent",
     defaultPreloadStaleTime: 0,
     Wrap: ({ children }) => (
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>{children}</TooltipProvider>
-      </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     ),
   })
 
