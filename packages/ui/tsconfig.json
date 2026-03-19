@@ -10,9 +10,9 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@workspace/ui/*": ["./src/*"]
-    }
+      "@tally/ui/*": ["./src/*"],
+    },
   },
   "include": ["."],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
 }
