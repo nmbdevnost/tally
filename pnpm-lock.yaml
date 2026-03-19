@@ -21,6 +21,37 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  apps/api:
+    dependencies:
+      '@hono/node-server':
+        specifier: ^1.19.11
+        version: 1.19.11(hono@4.12.8)
+      '@tally/db':
+        specifier: workspace:^
+        version: link:../../packages/db
+      '@tally/shared':
+        specifier: workspace:^
+        version: link:../../packages/shared
+      better-auth:
+        specifier: ^1.5.5
+        version: 1.5.5(@tanstack/react-start@1.163.2(crossws@0.4.4(srvx@0.11.12))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vite@7.3.1(@types/node@25.3.0)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)))(drizzle-kit@0.31.10)(drizzle-orm@0.45.1(@neondatabase/serverless@1.0.2)(@types/pg@8.18.0)(kysely@0.28.13))(mongodb@7.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
+      hono:
+        specifier: ^4.12.8
+        version: 4.12.8
+    devDependencies:
+      '@types/node':
+        specifier: ^25.1.0
+        version: 25.3.0
+      tsx:
+        specifier: ^4.21.0
+        version: 4.21.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   apps/web:
     dependencies:
       '@tailwindcss/vite':
