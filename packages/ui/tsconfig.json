@@ -10,7 +10,8 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@tally/ui/*": ["./src/*"],
+      "@/*": ["./src/*"],
+      "@tally/ui/*": ["../../packages/ui/src/*"],
     },
   },
   "include": ["."],
